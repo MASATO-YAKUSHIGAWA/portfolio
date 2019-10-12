@@ -1,0 +1,108 @@
+#about{
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+}
+
+.portfolio-header{
+  background-color: #1d809f;
+}
+.pf-title{
+  margin-top: 8px;
+  color: white;
+}
+.second-title{
+  color: white;
+  margin-bottom: 5px;
+}
+
+#portfolio-discription{
+  background-color: white;
+  margin-top: 20px;
+}
+.discription-table{
+  font-size: 20px;
+}
+.discription-table th{
+  padding: .75rem;
+  vertical-align: top;
+  border-bottom: 1px solid #dee2e6;
+}
+.discription-table td{
+  padding: .75rem;
+  vertical-align: top;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.www{
+  display: inline;
+}
+#portfolio-capture{
+  .container{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .row{
+    display: inline;
+  }
+  #portfolio-capture p{
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+  .col-lg-3{
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    p{
+      margin-bottom: 0;
+      font-size: 16px;
+      }
+  }
+  .col-lg-6{
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+    p{
+      margin-bottom: 0;
+      font-size: 16px;
+      }
+  }
+ .row::after{
+   content: none;
+ }
+ .row::before{
+  content: none;
+}
+  .img-fluid{
+    border: 1px solid  #dee2e6;
+  }
+}
+
+#about{
+  .intro{
+    text-align: left;
+  }
+  .mx-auto{
+    border-bottom: 2px solid #dee2e6;
+  }
+}
+.skill-set{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  .skill-table{
+    font-size: 20px;
+    width: 100%;
+  }
+  .skill-table td{
+    padding: .75rem;
+    vertical-align: top;
+    border-bottom: 1px solid #dee2e6;
+  }
+  .skill-table th{
+    padding: .75rem;
+    vertical-align: top;
+    border-bottom: 1px solid #dee2e6;
+    text-align: left;
+  }
+}

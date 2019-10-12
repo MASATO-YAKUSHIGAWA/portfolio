@@ -1,1 +1,103 @@
-33333
+/ Header
+%header.portfolio-header
+  .container.text-center.my-auto
+    %h1.pf-title メルカリのコピーサイト
+
+%section#portfolio-discription
+  .container
+    %table.discription-table
+      %tr
+        %th{scope: "row", style: "min-width: 200px"}
+          名前
+        %td{scope: "row"}
+          Freemaket Sample
+      %tr
+        %th{scope: "row"}
+          内容
+        %td{scope: "row"}
+          メルカリのコピーサイト
+          %br
+          %a{href:"http://54.168.38.235",  target:"_blank", rel:"noopener"}http://54.168.38.235
+          %br
+          ベーシック認証をかけています。（ユーザー名：56_mercari_b、パスワード：56b）
+      %tr
+        %th{scope: "row", style: "min-width: 200px"}
+          作成期間
+        %td{scope: "row"}
+          4週間
+      %tr
+        %th{scope: "row", style: "min-width: 200px"}
+          開発環境
+        %td{scope: "row"}
+          %ul
+            %li 言語: Ruby
+            %li FW  :Rails
+            %li OS  : Ubuntu
+            %li DB  : MySQL
+            %li アジャイル型開発（スクラム）、4人
+      %tr
+        %th{scope: "row", style: "min-width: 200px"}
+          担当業務
+        %td{scope: "row"}
+          %ul
+            %li 【フロント】（8枚）
+            %ul
+              %li 新規ユーザー登録ページ（メールアドレス）  5枚
+              %li 商品詳細ページ　1枚
+              %li 商品購入確認ページ　1枚
+              %li カテゴリ別ページ　1枚
+            %li 【サーバサイド】
+            %ul
+              %li ユーザー新規登録（メールアドレス）
+              %li 商品一覧表示（トップページ）
+              %li 商品詳細表示
+              %li 商品情報編集
+              %li 商品削除
+      %tr
+        %th{scope: "row", style: "min-width: 200px"}
+          実装箇所の仕様説明
+        %td{scope: "row"}
+          %ul
+            %li 【DB】テーブル数：10個
+            %li 【画像】 アップローダーはActive Strageを使用。ストレージはS3。
+            %li 【商品情報編集】
+            %ul
+              %li 【画像削除】 削除ボタンが押されれば、フラグを立て、コントローラで処理。
+              %li 【画像変更】 新しい画像を選択すれば入れ変わるようにJSを実装。
+              それと同時に前の画像には削除フラグを立てる。
+              %br 完了ボタンを押すと、新画像の保存、旧画像の削除を行う。（非同期）
+              %li 【画像追加】 追加された画像はJSにて擬似的に配列に保存、表示。
+              「編集する」ボタンが押されると、DBへ保存する（非同期）
+
+%section#portfolio-capture
+  .container
+    .row
+      .col-lg-3.col-xs-6
+        %img.img-fluid{:alt => "", :src => "/assets/img/portfolio-3.jpg"}/
+        %p トップページ
+    .row
+      .col-lg-3.col-xs-6
+        %img.img-fluid{:alt => "", :src => "/assets/img/tm_no_1_2.jpg"}/
+        %p カテゴリ別ページ
+    .row
+      .col-lg-3.col-xs-6
+        %img.img-fluid{:alt => "", :src => "/assets/img/tm_no_1_3.jpg"}/
+        %p 商品詳細ページ
+    .row
+      .col-lg-3.col-xs-6
+        %img.img-fluid{:alt => "", :src => "/assets/img/tm_no_1_4.jpg"}/
+        %p 商品購入確認ページ
+    .row
+      .col-lg-3.col-xs-6
+        %img.img-fluid{:alt => "", :src => "/assets/img/tm_no_1_5.jpg"}/
+        %p 商品削除ページ
+    .row
+      .col-lg-3.col-xs-6
+        %img.img-fluid{:alt => "", :src => "/assets/img/merkari_edit.mov.gif"}/
+        %p 商品編集ページ（GIF）
+
+/ Portfolio
+= render 'portfolios/portfolio'
+
+/ Footer
+= render "portfolios/footer"

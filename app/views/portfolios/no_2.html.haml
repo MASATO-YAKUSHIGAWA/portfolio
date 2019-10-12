@@ -1,1 +1,75 @@
-22222
+/ Header
+%header.portfolio-header
+  .container.text-center.my-auto
+    %h1.pf-title Line Bot
+    %h3.second-title
+      %em 〜 Notice rainy & garbage day 〜
+
+%section#portfolio-discription
+  .container
+    %table.discription-table
+      %tr
+        %th{scope: "row", style: "min-width: 200px"}
+          名前
+        %td{scope: "row"}
+          お節介オカン
+      %tr
+        %th{scope: "row"}
+          内容
+        %td{scope: "row"}
+          雨の日とゴミの日を通知するBOT
+          %br
+          下記QRコードから登録できます（最大50人）
+      %tr
+        %th{scope: "row", style: "min-width: 200px"}
+          作成期間
+        %td{scope: "row"}
+          １週間
+      %tr
+        %th{scope: "row", style: "min-width: 200px"}
+          開発環境
+        %td{scope: "row"}
+          %ul
+            %li 言語: Ruby
+            %li FW  :Rails
+            %li OS  : Ubuntu
+            %li DB  : MySQL
+            %li web API  : Line Messaging API
+      %tr
+        %th{scope: "row", style: "min-width: 200px"}
+          仕様説明
+        %td{scope: "row"}
+          %ul
+            %li 現在地を送信すると、一番近い観測地点を保存（例：和歌山 南部）。
+            毎日午前6時時点でその地点の降水確率が40%以上であれば午前7時に通知。
+            %li 下部のゴミ箱ボタンを押すと、ゴミの日を登録、確認ができる
+            登録すると、前日の20時に通知。最大５個まで登録可。
+            %br 第◯週、ゴミの種類にも対応。
+            %li 下部の太陽ボタンを押すと、明日の天気を確認できる。
+            %li 【DB】テーブル数：3個。うち１つは観測地点の座標データ。
+            %li 定期実行はherokuのアドオンを使用。
+
+%section#portfolio-capture
+  .container
+    .row
+      .col-lg-3.col-xs-6
+        %img.img-fluid{:alt => "", :src => "/assets/img/my_no_2_1.jpg"}/
+        %p QRコード
+    .row
+      .col-lg-3.col-xs-6
+        %img.img-fluid{:alt => "", :src => "/assets/img/my_no_2_5.jpg"}/
+        %p 通知画面
+    .row
+      .col-lg-3.col-xs-6
+        %img.img-fluid{:alt => "", :src => "/assets/img/my_no_2_3.jpg"}/
+        %p 下部のゴミ箱、太陽ボタンを押した様子
+    .row
+      .col-lg-3.col-xs-6
+        %img.img-fluid{:alt => "", :src => "/assets/img/my_no_2_4.jpg"}/
+        %p ゴミの日登録画面
+
+/ Portfolio
+= render 'portfolios/portfolio'
+
+/ Footer
+= render "portfolios/footer"

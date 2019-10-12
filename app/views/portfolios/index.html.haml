@@ -1,178 +1,80 @@
-!!!
-%html{:lang => "ja"}
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{:charset => "utf-8"}/
-    %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
-    %meta{:content => "", :name => "description"}/
-    %meta{:content => "", :name => "author"}/
-    %title Stylish Portfolio - Start Bootstrap Template
-    / Bootstrap Core CSS
-    %link{:href => "/assets/vendor/bootstrap/css/bootstrap.min.css", :rel => "stylesheet"}/
-    / Custom Fonts
-    %link{:href => "/assets/vendor/fontawesome-free/css/all.min.css", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "/assets/vendor/simple-line-icons/css/simple-line-icons.css", :rel => "stylesheet"}/
-    / Custom CSS
-    %link{:href => "/assets/css/stylish-portfolio.min.css", :rel => "stylesheet"}/
-  %body#page-top
-    / Navigation
-    %a.menu-toggle.rounded{:href => "#"}
-      %i.fas.fa-bars
-    %nav#sidebar-wrapper
-      %ul.sidebar-nav
-        %li.sidebar-brand
-          %a.js-scroll-trigger{:href => "#page-top"} Start Bootstrap
-        %li.sidebar-nav-item
-          %a.js-scroll-trigger{:href => "#page-top"} Home
-        %li.sidebar-nav-item
-          %a.js-scroll-trigger{:href => "#about"} About
-        %li.sidebar-nav-item
-          %a.js-scroll-trigger{:href => "#services"} Services
-        %li.sidebar-nav-item
-          %a.js-scroll-trigger{:href => "#portfolio"} Portfolio
-        %li.sidebar-nav-item
-          %a.js-scroll-trigger{:href => "#contact"} Contact
-    / Header
-    %header.masthead.d-flex
-      .container.text-center.my-auto
-        %h1.mb-1 MASATO YAKUSHIGAWA
-        %h3.mb-5
-          %em masato yakushigawa's portfolio
-        %a.btn.btn-primary.btn-xl.js-scroll-trigger{:href => "#about", style:"font-size: 16px"} WHO's ME
-      .overlay
-    / About
-    %section#about.content-section.bg-light{style: "height: 600px"}
-      .container.text-center
-        .row
-          .col-lg-10.mx-auto
-            %h3 ABOUT
-            %em
-            %h1{style: "font-size: 50px"} 自己紹介
-            
-            .row
-              .col-lg-6
-                =image_tag "/assets/img/my_pict.jpg",{style: "width: 70%; border-radius: 50%", class: "img-fluid"}
-              .col-lg-6
-                %ul.dis{style: "font-size: 20px"}
-                  %li 名前
-                  %li 出身
-                  %li 学歴
-                  %li 経歴
+%body#page-top
+  / Navigation
+  %a.menu-toggle.rounded{:href => "#"}
+    %i.fas.fa-bars
+  %nav#sidebar-wrapper
+    %ul.sidebar-nav
+      %li.sidebar-brand
+        %a.js-scroll-trigger{:href => "#page-top"} Start Bootstrap
+      %li.sidebar-nav-item
+        %a.js-scroll-trigger{:href => "#page-top"} Home
+      %li.sidebar-nav-item
+        %a.js-scroll-trigger{:href => "#about"} About
+      %li.sidebar-nav-item
+        %a.js-scroll-trigger{:href => "#portfolio"} Portfolio
+      %li.sidebar-nav-item
+        %a.js-scroll-trigger{:href => "#contact"} Contact
 
+  / Header
+  %header.masthead.d-flex
+    .container.text-center.my-auto
+      %h1.mb-1 MASATO YAKUSHIGAWA
+      %h3.mb-5
+        %em masato yakushigawa's portfolio
+      %a.btn.btn-primary.btn-xl.js-scroll-trigger{:href => "#about", style:"font-size: 16px"} WHO's ME
+    .overlay
 
-            %a.btn.btn-dark.btn-xl.js-scroll-trigger{:href => "#portfolio"} 制作実績
-    / Services
-    -# %section#services.content-section.bg-primary.text-white.text-center
-    -#   .container
-    -#     .content-section-heading
-    -#       %h3.text-secondary.mb-0 Services
-    -#       %h2.mb-5 What We Offer
-    -#     .row
-    -#       .col-lg-3.col-md-6.mb-5.mb-lg-0
-    -#         %span.service-icon.rounded-circle.mx-auto.mb-3
-    -#           %i.icon-screen-smartphone
-    -#         %h4
-    -#           %strong Responsive
-    -#         %p.text-faded.mb-0 Looks great on any screen size!
-    -#       .col-lg-3.col-md-6.mb-5.mb-lg-0
-    -#         %span.service-icon.rounded-circle.mx-auto.mb-3
-    -#           %i.icon-pencil
-    -#         %h4
-    -#           %strong Redesigned
-    -#         %p.text-faded.mb-0 Freshly redesigned for Bootstrap 4.
-    -#       .col-lg-3.col-md-6.mb-5.mb-md-0
-    -#         %span.service-icon.rounded-circle.mx-auto.mb-3
-    -#           %i.icon-like
-    -#         %h4
-    -#           %strong Favorited
-    -#         %p.text-faded.mb-0
-    -#           Millions of users
-    -#           %i.fas.fa-heart
-    -#           Start Bootstrap!
-    -#       .col-lg-3.col-md-6
-    -#         %span.service-icon.rounded-circle.mx-auto.mb-3
-    -#           %i.icon-mustache
-    -#         %h4
-    -#           %strong Question
-    -#         %p.text-faded.mb-0 I mustache you a question...
-    -# / Callout
-    -# %section.callout
-    -#   .container.text-center
-    -#     %h2.mx-auto.mb-5
-    -#       Welcome to
-    -#       %em your
-    -#       next website!
-    -#     %a.btn.btn-primary.btn-xl{:href => "https://startbootstrap.com/template-overviews/stylish-portfolio/"} Download Now!
-    / Portfolio
-    %section#portfolio.content-section{style: "background-color: pink"}
-      .container
-        .content-section-heading.text-center
-          %h3.mb-0 Portfolio
-          %h2.mb-5 Recent Projects
-        .row.no-gutters
-          .col-lg-6
-            %a.portfolio-item{:href => "/1"}
-              %span.caption
-                %span.caption-content
-                  %h1 Wish List
-                  %p.mb-0 A yellow pencil with envelopes on a clean, blue backdrop!
-              %img.img-fluid{:alt => "", :src => "/assets/img/portfolio-1.jpg"}/
-          .col-lg-6
-            %a.portfolio-item{:href => "/2"}
-              %span.caption
-                %span.caption-content
-                  %h1 Line Bot
-                  %p.mb-0 A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!
-              = image_tag "img/portfolio-2.jpg", class: "img-fluid"
-          .col-lg-6
-            %a.portfolio-item{:href => "/3"}
-              %span.caption
-                %span.caption-content
-                  %h1 メルカリのコピーサイト
-                  %p.mb-0 ユーザー名：56_mercari_b
-                  %p.mb-0 パスワード：56b
-              %img.img-fluid{:alt => "", :src => "/assets/img/portfolio-3.jpg"}/
-          .col-lg-6
-            %a.portfolio-item
-              %span.caption
-                %span.caption-content
-                  %h1 Under Construction
-                  %p.mb-0 Coming soon...
-              %img.img-fluid{:alt => "", :src => "/assets/img/portfolio-4.jpg"}/
-    / Call to Action
-    %section.content-section.bg-primary.text-white
-      .container.text-center
-        %h2.mb-4 The buttons below are impossible to resist...
-        %a.btn.btn-xl.btn-light.mr-4{:href => "#"} Click Me!
-        %a.btn.btn-xl.btn-dark{:href => "#"} Look at Me!
-    / Map
-    %section#contact.map
-      %iframe{:frameborder => "0", :height => "100%", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&aq=0&oq=twitter&sll=28.659344,-81.187888&sspn=0.128789,0.264187&ie=UTF8&hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&t=m&z=15&iwloc=A&output=embed", :width => "100%"}
-      %br/
-      %small
-        %a{:href => "https://maps.google.com/maps?f=q&source=embed&hl=en&geocode=&q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&aq=0&oq=twitter&sll=28.659344,-81.187888&sspn=0.128789,0.264187&ie=UTF8&hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&t=m&z=15&iwloc=A"}
-    / Footer
-    %footer.footer.text-center
-      .container
-        %ul.list-inline.mb-5
-          %li.list-inline-item
-            %a.social-link.rounded-circle.text-white.mr-3{:href => "#"}
-              %i.icon-social-facebook
-          %li.list-inline-item
-            %a.social-link.rounded-circle.text-white.mr-3{:href => "#"}
-              %i.icon-social-twitter
-          %li.list-inline-item
-            %a.social-link.rounded-circle.text-white{:href => "#"}
-              %i.icon-social-github
-        %p.text-muted.small.mb-0 Copyright © Your Website 2019
-    / Scroll to Top Button
-    %a.scroll-to-top.rounded.js-scroll-trigger{:href => "#page-top"}
-      %i.fas.fa-angle-up
-    / Bootstrap core JavaScript
-    %script{:src => "/assets/vendor/jquery/jquery.min.js"}
-    %script{:src => "/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"}
-    / Plugin JavaScript
-    %script{:src => "assets/vendor/jquery-easing/jquery.easing.min.js"}
-    / Custom scripts for this template
-    %script{:src => "assets/js//stylish-portfolio.min.js"}
+  / About
+  %section#about.content-section.bg-light
+    .container.text-center
+      .row
+        .col-lg-10.mx-auto
+          %h3 ABOUT
+          %em
+          %h1{style: "font-size: 50px"} 自己紹介 
+          .row
+            .col-lg-6.col-xm-6
+              =image_tag "/assets/img/my_pict.jpg", {style: "width: 50%; border-radius: 50%", class: "img-fluid"}
+            .col-lg-6
+              %ul.intro{style: "font-size: 20px"}
+                %li 名前：薬師川 眞人（Masato Yakushigawa）
+                %li 1991年生まれ　28歳
+                %li 出身：大阪府
+                %li 学歴：同志社大学 スポーツ健康科学部 卒
+                %li 経歴：2015年4月〜　新卒としてスポーツ用品のメーカー兼代理店で4年間営業として勤務。
+                2019年3月〜　web業界に興味を持ち、webスクール（TECH::EXPERT）で学ぶ。
+        .col-lg-10.mx-auto.skill-set{style: "border-bottom: none"}
+          %h1{style: "font-size: 50px; margin-bottom:10px"} スキルセット 
+          .row
+            .col-lg-12.col-xm-6
+              %table.skill-table
+                %tr
+                  %th{style:"min-width: 100px"}言語
+                  %td Ruby
+                  %td CSS（scss）
+                  %td HTML（haml）
+                  %td JavaScrit
+                %tr
+                  %th FW
+                  %td Rails
+                  %td jQuery
+                %tr
+                  %th 開発環境
+                  %td Nginx
+                  %td Puma
+                  %td Unicorn
+                %tr
+                  %th その他
+                  %td MySQL
+                  %td heroku
+                  %td AWS EC2
+                  %td
+                    %a{href:"https://github.com/MASATO-YAKUSHIGAWA",  target:"_blank", rel:"noopener"}GitHub
+
+      %a.btn.btn-dark.btn-xl.js-scroll-trigger{:href => "#portfolio", style:"font-size: 16px"} 制作実績
+
+  / Portfolio
+  = render 'portfolios/portfolio'
+
+  / Footer
+  = render "portfolios/footer"

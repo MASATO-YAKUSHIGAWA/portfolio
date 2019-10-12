@@ -1,1 +1,73 @@
-wwww
+/ Header
+%header.portfolio-header
+  .container.text-center.my-auto
+    %h1.pf-title Wish List
+    %h3.second-title
+      %em 〜 WHAT DO YOU WANT? 〜
+
+%section#portfolio-discription
+  .container
+    %table.discription-table
+      %tr
+        %th{scope: "row", style: "min-width: 200px"}
+          名前
+        %td{scope: "row"}
+          WHAT DO YOU WANT?
+      %tr
+        %th{scope: "row"}
+          内容
+        %td{scope: "row"}
+          ウィッシュリストを管理、公開できるサイト
+          %br
+          %a{href:"https://wdywant.herokuapp.com",  target:"_blank", rel:"noopener"}https://wdywant.herokuapp.com
+      %tr
+        %th{scope: "row", style: "min-width: 200px"}
+          作成期間
+        %td{scope: "row"}
+          １週間
+      %tr
+        %th{scope: "row", style: "min-width: 200px"}
+          開発環境
+        %td{scope: "row"}
+          %ul
+            %li 言語: Ruby
+            %li FW  :Rails
+            %li OS  : Ubuntu
+            %li DB  : MySQL
+      %tr
+        %th{scope: "row", style: "min-width: 200px"}
+          仕様説明
+        %td{scope: "row"}
+          %ul
+            %li 【DB】テーブル数：6個
+            %li 【フロント】ページ数：3枚（トップページ、マイページ、タイムライン）
+            タイムラインはflex-direction: row-reverseを使い、交互に表示。
+            %li 【ユーザー登録】deviseを使わずにsessionの仕組みを利用し構築。
+            未入力項目にはバリデーションあり
+            %li 【リストの登録】タブ、リストの登録、削除、編集はajaxによる非同期で実装
+            %li 【画像】 アップローダーはActive Strageを使用。ストレージはS3。
+
+%section#portfolio-capture
+  .container
+    .row
+      .col-lg-3.col-xs-6
+        %img.img-fluid{:alt => "", :src => "/assets/img/portfolio-1.jpg"}/
+        %p トップページ
+    .row
+      .col-lg-3.col-xs-6
+        %img.img-fluid{:alt => "", :src => "/assets/img/my_no_1_2.jpg"}/
+        %p マイページ
+    .row
+      .col-lg-3.col-xs-6
+        %img.img-fluid{:alt => "", :src => "/assets/img/my_no_1_3.jpg"}/
+        %p タイムライン
+    .row
+      .col-lg-3.col-xs-6
+        %img.img-fluid{:alt => "", :src => "/assets/img/my_no_1_4.jpg"}/
+        %p 他ユーザーのリスト
+
+/ Portfolio
+= render 'portfolios/portfolio'
+
+/ Footer
+= render "portfolios/footer"
