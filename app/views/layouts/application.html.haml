@@ -2,14 +2,6 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Portfolio
-    = csrf_meta_tags
-    = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body
-    = yield
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width, initial-scale=1, shrink-to-fit=no", :name => "viewport"}/
     %meta{:content => "", :name => "description"}/
@@ -23,3 +15,5 @@
     %link{:href => "/assets/vendor/simple-line-icons/css/simple-line-icons.css", :rel => "stylesheet"}/
     / Custom CSS
     %link{href:"/assets/css/stylish-portfolio.min.css", :rel => "stylesheet",:type => "text/css"}/
+  %body
+    = yield
