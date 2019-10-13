@@ -1,6 +1,8 @@
 .masthead.d-flex{
-  // background: url('bg-callout.jpg');
-  // background-size: cover;
+  background: url('bg-callout.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
 
@@ -112,3 +114,4 @@
     text-align: left;
   }
 }
+
