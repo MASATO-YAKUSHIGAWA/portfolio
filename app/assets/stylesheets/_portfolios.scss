@@ -1,10 +1,38 @@
+body{
+  font-family: 'Source Sans Pro';
+}
+// ヘッダー
 .masthead.d-flex{
   background-image: url(image_path('bg-callout_min.jpg'));
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
+  .headfont{
+    font-weight: 700;
+    font-size: 88px;
+    color: black;
+    }
+  .headfont-2{
+    font-weight: 700;
+    font-size: 28px;
+    color: black;
+  }
+  @media screen and (max-width: 640px) {
+    .headfont{
+      font-weight: 700;
+      font-size: 88px;
+      color: white;
+      }
+    .headfont-2{
+      font-weight: 700;
+      font-size: 28px;
+      color: white;
+    }
+  }
 }
+
+// 自己紹介
+
 #about{
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
@@ -17,6 +45,7 @@
 .pf-title{
   margin-top: 8px;
   color: white;
+  font-weight: 700;
 }
 .second-title{
   color: white;

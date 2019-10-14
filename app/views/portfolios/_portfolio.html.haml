@@ -1,34 +1,33 @@
 %section#portfolio.content-section{style: "background-color: pink"}
   .container
     .content-section-heading.text-center
-      %h3.mb-0 Portfolio
-      %h2.mb-5 個人開発
+      %h3.mb-0{style: "font-size: 20px; font-weight:700"} Portfolio
+      %h2.mb-5{style: "font-size: 50px; font-weight:700; margin-bottom: 20px"} 個人開発
     .row.no-gutters
       .col-lg-6
         %a.portfolio-item{:href => "/1"}
           %span.caption
             %span.caption-content
-              %h1 Wish List
+              %h1{style:"font-weight:700"} Wish List
               %p.mb-0 やりたい事、欲しいものを管理、公開できるサイト
           = image_tag "portfolio-1.jpg", class: "img-fluid"
       .col-lg-6
         %a.portfolio-item{:href => "/2"}
           %span.caption
             %span.caption-content
-              %h1 Line Bot
+              %h1{style:"font-weight:700"} Line Bot
               %p.mb-0 雨の日とゴミの日を教えてくれるBOT
           = image_tag "portfolio-2.jpg", class: "img-fluid"
 
 %section#portfolio.content-section{style: "background-color: pink"}
   .container
     .content-section-heading.text-center
-      %h3.mb-0 Portfolio
-      %h2.mb-5 チーム開発
+      %h2.mb-5{style: "font-size: 50px; font-weight:700; margin-bottom: 20px"} チーム開発
     .row.no-gutters
       .col-lg-6
         %a.portfolio-item{:href => "/3"}
           %span.caption
             %span.caption-content
-              %h1 メルカリのコピーサイト
+              %h1{style:"font-weight:700"} メルカリのコピーサイト
               %p.mb-0 スクールの課題で作成
           = image_tag "portfolio-3.jpg", class: "img-fluid"
