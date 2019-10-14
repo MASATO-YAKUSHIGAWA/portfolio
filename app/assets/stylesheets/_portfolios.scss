@@ -1,16 +1,16 @@
 .masthead.d-flex{
-  background-image: url(image_path('bg-callout.jpg'));
+  background-image: url(image_path('bg-callout_min.jpg'));
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 
 }
-
 #about{
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
 }
 
+// ポートフォリオ
 .portfolio-header{
   background-color: #1d809f;
 }
@@ -22,7 +22,6 @@
   color: white;
   margin-bottom: 5px;
 }
-
 #portfolio-discription{
   background-color: white;
   margin-top: 20px;
@@ -40,10 +39,28 @@
   vertical-align: top;
   border-bottom: 1px solid #dee2e6;
 }
-
-.www{
-  display: inline;
+@media screen and (max-width: 640px) {
+  .last_pf_table td:last-child {
+    border-bottom: solid 1px #ccc;
+    width: 100%;
+  }
+  .discription-table {
+    width: 80%;
+  }
+  .discription-table th{
+    background-color: lightgrey;
+    border-bottom: none;
+    display: block;
+    width: 100%;
+  }
+  .discription-table td {
+　　border-bottom: none;
+    display: block;
+    width: 100%;
+  }
 }
+
+// キャプチャ
 #portfolio-capture{
   .container{
     width: 100%;
@@ -65,7 +82,7 @@
     p{
       margin-bottom: 0;
       font-size: 16px;
-      }
+    }
   }
   .col-lg-6{
     display: inline;
@@ -74,7 +91,7 @@
     p{
       margin-bottom: 0;
       font-size: 16px;
-      }
+    }
   }
  .row::after{
    content: none;
@@ -87,6 +104,7 @@
   }
 }
 
+// 自己紹介
 #about{
   .intro{
     text-align: left;
@@ -95,6 +113,8 @@
     border-bottom: 2px solid #dee2e6;
   }
 }
+
+// スキルセット
 .skill-set{
   margin-top: 20px;
   margin-bottom: 20px;
@@ -114,4 +134,25 @@
     text-align: left;
   }
 }
+@media screen and (max-width: 640px) {
+  .last_skill_table td:last-child {
+    border-bottom: solid 1px #ccc;
+    width: 100%;
+  }
+  .skill-table {
+    width: 80%;
+  }
+  .skill-table th{
+    background-color: lightgrey;
+    border-bottom: none;
+    display: block;
+    width: 100%;
+  }
+  .skill-table td {
+　　border-bottom: none;
+    display: block;
+    width: 100%;
+  }
+}
+
 
